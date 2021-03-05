@@ -44,4 +44,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-storage'
 
+    //Dependencia MaterialSearchView
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
 }

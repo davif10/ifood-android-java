@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ifood">
-        <activity android:name=".activity.EmpresaActivity"></activity>
+        <activity android:name=".activity.ConfiguracoesUsuarioActivity"
+            android:parentActivityName=".activity.HomeActivity"></activity>
+        <activity
+            android:name=".activity.NovoProdutoEmpresaActivity"
+            android:parentActivityName=".activity.EmpresaActivity" />
+        <activity
+            android:name=".activity.ConfiguracoesEmpresaActivity"
+            android:parentActivityName=".activity.EmpresaActivity" />
+        <activity android:name=".activity.EmpresaActivity" />
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.AutenticacaoActivity" />
         <activity android:name=".activity.MainActivity">
