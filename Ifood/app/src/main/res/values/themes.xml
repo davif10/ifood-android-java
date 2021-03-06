@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Ifood" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.Ifood" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/vermelho_escuro</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorControlActivated">@color/vinho</item>
+        <item name="colorControlActivated">@color/vinho</item>usu
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
@@ -18,6 +18,8 @@
     <style name="botaoPadrao" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#ff404e</item>
         <item name="colorPrimary">@color/vinho</item>
+        <item name="colorButtonNormal">@color/vinho</item>
+        <item name="android:textColor">@android:color/white</item>
         <item name="colorOnPrimary">@android:color/white</item>
     </style>
 
