@@ -36,6 +36,13 @@ public class Produto {
         produtoRef.setValue(this);
     }
 
+    public void remover(){
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference produtoRef = firebaseRef.child("produtos")
+                .child(getIdUsuario())
+                .child(getIdProduto());
+        produtoRef.removeValue();
+    }
 
     public String getIdProduto() {
         return idProduto;

@@ -177,7 +177,7 @@ public class NovoProdutoEmpresaActivity extends AppCompatActivity {
 
         //Configurações Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Configurações");
+        toolbar.setTitle("Novo Produto");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
