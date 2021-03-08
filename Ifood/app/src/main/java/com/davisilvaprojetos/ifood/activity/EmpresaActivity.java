@@ -124,6 +124,9 @@ public class EmpresaActivity extends AppCompatActivity {
             case R.id.menuNovoProduto:
                 abrirNovoProduto();
                 break;
+            case R.id.menuPedidos:
+                abrirPedidos();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -146,6 +149,10 @@ public class EmpresaActivity extends AppCompatActivity {
         firebaseRef = ConfiguracaoFirebase.getFirebase();
         idUsuarioLogado = UsuarioFirebase.getIdUsuario();
         recyclerProdutos = findViewById(R.id.recyclerProdutos);
+    }
+
+    private  void abrirPedidos(){
+        startActivity(new Intent(EmpresaActivity.this, PedidosActivity.class));
     }
 
     private  void abrirConfiguracoes(){

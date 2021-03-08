@@ -93,6 +93,8 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
         toolbar.setTitle("Configurações usuário");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        editUsuarioEndereco = findViewById(R.id.editUsuarioEndereco);
+        editUsuarioNome = findViewById(R.id.editUsuarioNome);
 
         firebaseRef = ConfiguracaoFirebase.getFirebase();
         idUsuario = UsuarioFirebase.getIdUsuario();

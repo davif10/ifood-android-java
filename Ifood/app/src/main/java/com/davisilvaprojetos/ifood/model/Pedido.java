@@ -3,6 +3,7 @@ package com.davisilvaprojetos.ifood.model;
 import com.davisilvaprojetos.ifood.helper.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Pedido {
@@ -14,7 +15,7 @@ public class Pedido {
     private List<ItemPedido> itens;
     private Double total;
     private String status = "pendente";
-    private int metodoPagamento;
+    private int metodoPagamento = 0;
     private String observacao;
 
     public Pedido() {
@@ -41,6 +42,39 @@ public class Pedido {
                 .child(getIdUsuario());
 
         pedidoRef.setValue(this);
+    }
+
+    public void remover(){
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos_usuario")
+                .child(getIdEmpresa())
+                .child(getIdUsuario());
+
+        pedidoRef.removeValue();
+    }
+
+    public void confirmar(){
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos")
+                .child(getIdEmpresa())
+                .child(getIdPedido());
+
+        pedidoRef.setValue(this);
+    }
+
+    public void atualizarStatus(){
+        HashMap<String, Object> status = new HashMap<>();
+        status.put("status", getStatus());
+
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos")
+                .child(getIdEmpresa())
+                .child(getIdPedido());
+
+        pedidoRef.updateChildren(status);
     }
 
     public String getIdUsuario() {
