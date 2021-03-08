@@ -104,8 +104,8 @@ public class PedidosActivity extends AppCompatActivity {
                         pedidos.add(pedido);
                     }
                     adapterPedido.notifyDataSetChanged();
-                    dialog.dismiss();
                 }
+                dialog.dismiss();
             }
 
             @Override

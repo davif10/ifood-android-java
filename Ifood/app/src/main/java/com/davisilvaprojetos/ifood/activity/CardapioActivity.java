@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.davisilvaprojetos.ifood.R;
 import com.davisilvaprojetos.ifood.adapter.AdapterProduto;
@@ -297,6 +298,7 @@ public class CardapioActivity extends AppCompatActivity {
                 pedidoRecuperado.confirmar();
                 pedidoRecuperado.remover();
                 pedidoRecuperado = null;
+                Toast.makeText(CardapioActivity.this, "Pedido enviado para a loja.", Toast.LENGTH_SHORT).show();
             }
         });
 
