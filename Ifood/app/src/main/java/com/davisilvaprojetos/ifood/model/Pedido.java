@@ -14,7 +14,7 @@ public class Pedido {
     private List<ItemPedido> itens;
     private Double total;
     private String status = "pendente";
-    private int metodoPagamento;
+    private int metodoPagamento = 0;
     private String observacao;
 
     public Pedido() {
